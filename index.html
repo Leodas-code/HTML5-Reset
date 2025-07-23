@@ -20,12 +20,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title></title>
+	<title>HTML5-Reset Starter Page</title>
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<meta name="copyright" content="" />
 
-	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="stylesheet" href="assets/css/styles.css"/>
 
 </head>
 
@@ -81,7 +81,7 @@
 				<input type="checkbox" id="terms" required="required" />
 				<label for="terms">I have read and accept the <a href="#" target="_blank">terms and conditions</a>.</label>
 				
-				<input type="submit" value="Submit">
+				<input type="submit" value="Submit" id="submit-button" onclick="Submit()">
 			</form>
 	
 		</article>
@@ -103,6 +103,11 @@
 	</footer>
 
 </div>
-
+<script>
+document.getElementById("submit-button").addEventListener("click", function(event) {
+  event.preventDefault(); // prevent real form submission
+  alert("The Form Submitted Successfully!");
+});
+</script>
 </body>
 </html>
